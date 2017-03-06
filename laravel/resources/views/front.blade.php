@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset=="UTF-8">
+    <meta charset="UTF-8">
     <meta name="robots" content="noarchive">
     <title>Dumblr</title>
-    <link rel="icon" type="image/png" href="Resources/logodumblrv2.png"/>
-    
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="Fonts.css"/>
-    <link rel="stylesheet" type="text/css" href="FrontStyle.css"/>
-    <script src="jquery-3.1.1.min.js" type="text/javascript"></script>
-
-
-    
-        
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="{{ URL::asset('Resources/logodumblrv2.png') }}"/>
+    <link href="{{ URL::asset('css/bootstrap.min.css') }} " rel="stylesheet">
+    <link href="{{ URL::asset('Fonts.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('FrontStyle.css') }}" rel="stylesheet">
+    <script src="{{ URL::asset('jquery-3.1.1.min.js') }}  " type="text/javascript"></script>    
+    <script src="{{ URL::asset('js/bootstrap.min.js') }}  "></script>
 </head>
 <body>
     
@@ -29,13 +24,14 @@
         
         <label class="inicio">Iniciar session</label>
             <div id="login" class="contenedor" style="left:50%">
-            <form action="index.php" method="post">
-            
+            <form action="main" method="post">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="text" class="form-control" placeholder="ejemplo@email.com" name="correoL" maxlength="40" required>
                 <input type="password" class="form-control" placeholder="contrase&ntilde;a" name="passwordL" maxlength="40" required>
                 <button class="button" type="submit" name="loginbutton"><b>Entrar</b></button>
                 <a href="recuperarContra.php"><p>&iquest;Olvidaste tu contrase&ntilde;a?</p></a>
          </form>
+                
         </div>
     <div class="crear">
     <br>

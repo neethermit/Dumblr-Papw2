@@ -4,16 +4,13 @@
     <meta charset=="UTF-8">
     <meta name="robots" content="noarchive">
     <title>Dumblr</title>
-    <link rel="icon" type="image/png" href="Resources/logodumblrv2.png"/>
+    <link rel="icon" type="image/png" href="{{ URL::asset('Resources/logodumblrv2.png') }}"/>
     
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" type="text/css" href="Fonts.css"/>
-    <link rel="stylesheet" type="text/css" href="MainStyle.css"/>
-    
-    <script src="jquery-3.1.1.min.js" type="text/javascript"></script>
-    
-    <script src="js/bootstrap.min.js"></script>
+    <link href="{{ URL::asset('css/bootstrap.min.css') }} " rel="stylesheet">
+    <link href="{{ URL::asset('Fonts.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('FrontStyle.css') }}" rel="stylesheet">
+    <script src="{{ URL::asset('jquery-3.1.1.min.js') }}  " type="text/javascript"></script>    
+    <script src="{{ URL::asset('js/bootstrap.min.js') }}  "></script>
     
 </head>
 <body>
