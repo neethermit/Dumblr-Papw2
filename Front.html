@@ -15,18 +15,29 @@
     
         
     <script src="js/bootstrap.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 </head>
 <body>
-    
         <div class="logo">
-    <img src="Resources/Dumblr2logo.png">
-            <div class="buscar">
-            <input type="text" class="transparente"  placeholder="Buscar..."> 
+             <div class="container-fluid">
+            <div class="row ">
+                <div class="col-xs-12">
+                    <img src="Resources/Dumblr2logo.png" class="center-block">
+                </div>    
+                
+                <div class="col-xs-12">
+            <div class="buscar center-block">
+            <input type="text" placeholder="Buscar..." class="center-block"> 
             <span class="glyphicon glyphicon-search"></span>
             </div>
-            <hr class="light">
+                </div>
+                </div>
+            </div>
     </div>
         
+<div class="container-fluid"> 
         <label class="inicio">Iniciar session</label>
             <div id="login" class="contenedor" style="left:50%">
             <form action="index.php" method="post">
@@ -47,6 +58,7 @@
                     <button class="button openmodal" type="submit" name="loginbutton"><b>   Crear nueva cuenta</b></button>
     </div>
     
+    </div>
         <div id="myModal" class="modal">
         <div class="modal-content">
             <form name="singup">
@@ -190,6 +202,7 @@
             </form>
             </div>
     </div>
+    
     
      <script>
         

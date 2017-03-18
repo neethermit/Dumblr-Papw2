@@ -3,8 +3,9 @@
   src: URL('Resources/AvantgardeExtralight.otf') ;
 }
 
+
 body{
-        background: url('Resources/lowpolyO.png') no-repeat center center fixed; 
+    background: url('Resources/lowpolyO.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,17 +15,18 @@ body{
 }
 
 ul{
-    
+    padding: 0;
     list-style-type: none;
 }
 
+hr{
+    margin-top:0; 
+}
 .searchbar{
     position: fixed;
-    display:flex;
     background: #222;
     width: 100%;
     top: 0%;
-    height: 70px;
     box-shadow: 0px 5px 20px #212223;
     z-index: 5;
 }
@@ -32,26 +34,24 @@ ul{
 .subscriptions{
     position: fixed;
     top: 100px;
-    background:rgba(238, 238, 238, 0.8);
-    height: 65%;
+    background:rgba(238, 238, 238, 0.6);
+    height: 75%;
     width:270px;
     left: 30px;    
     padding: 30px;
     padding-top:20px;
-    overflow-y:scroll;
+    //overflow-y:scroll;
+ 
 }
 
 .songfeed{
-    margin-left: 370px;
-    margin-right: 30px;
     margin-top: 100px;
     margin-bottom: 30px;
     padding-top: 1%;
     padding-bottom: 100%;
-    padding-left: 15px;
-    width:65%;
-    left: 23%;
+    display: inline-block;
     z-index: -1;
+    
 }
 
 
@@ -64,9 +64,8 @@ ul{
 
 .searchbar div input[type="text"]{
     display: block;
-    margin-top: 35px;
+    margin-top: 25px;
     border: 0px;
-    width: 400px;
     color: aliceblue;
     background: rgba(0,0,0,0);
     padding-bottom: 0%;
@@ -77,70 +76,116 @@ ul{
 }
 
 .logodiv{
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-right: 180px;  
-    
 }
 
 .logo{
 
     display:block;
     background-image: url(Resources/Dumblr2logo.png);
-    width: 200px; 
-    height: 60px;
+ margin-left: 10px;
+    margin-top: 25px;
+    height:25px;
     background-repeat: no-repeat;
     background-size:contain;
+
 }
 
-.menu{
-          margin-left: 10px;
-    margin-top: 30px;
-    margin-right: 180px;  
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 7px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 7px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    font-size: 7px;
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-size: 7px;
+}
+
+.menu,.username,.subir{
+    
+    text-align: center;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    font-size: 10px;
     display: block;
     color: aliceblue;
+    cursor: pointer; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.username{
     
+    text-overflow:ellipsis;
+    text-align: right;
+}
+
+.subir{
+    color:#ff872b;
+}
+.profilepicture{    
+    background-image: url(Resources/astroavatar.png);
+    display:block;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center; 
+    margin: 0;
+   
 }
 
 
-.glyphicon.glyphicon-search{
-    margin-top: 25px;
-    font-size: 25px;
+.glyphicon.glyphicon-search,.glyphicon.glyphicon-cog{
+    margin-top: 30px;
+    font-size: 15px;
     color: aliceblue;
     cursor: pointer;
+}
+
+.glyphicon.glyphicon-cog{
+     margin-top: 10px;
 }
 
 .glyphicon-repeat {
     
     padding-left: 10px;
 }
-
-.playericon{
-        margin: 0%  !important;
-    font-size: 30px !important; 
-    padding-top:10px;
-        cursor: pointer;
-    display:block;
+.glyphicon-comment,.glyphicon-retweet{
+ 
+    font-size: 12px;   
 }
 
-.glyphicon.glyphicon-play,.glyphicon.glyphicon-pause{
+
+
+ .trackicon.glyphicon.glyphicon-play,.trackicon.glyphicon.glyphicon-pause{
 
     margin: 0%;
     margin-top: 5px;
-   margin-bottom: 10px;
-    width: 30px;
-    font-size: 25px;
+    margin-bottom: 10px;
+    width: 20px;
     cursor: pointer;
     display:block;
-    font-size: 50px;
+    font-size: 30px;
     margin-right: 35px;
 }
 
+.playericon{
+  
+    cursor: pointer;
+    display:block;
+    width:inherit;
+    color: rgba(238, 238, 238, 0.8);
+}
 
-
-
-
-
+.iconbox{
+    display:flex;
+    margin-top: 16px;
+    margin-right:10px;
+    padding-left:10px; 
+}
 .subelement
 {
     
@@ -196,21 +241,20 @@ ul{
     padding-right: 20px;
     display:inline-block;
     background-color: aliceblue;
-    width: 450px;
+    width: 100%;
 }
 
  .trackfiller{
      
-     margin-top: 0px;
+    margin-top: 0px;
     display:inline-block;
-    width: 450px;
+    width: 150px;
 }
 .playerbarview{
     
     display:inline;
-    
+    width: 100%;
     position:relative;
-    width:450px;
     padding: 0%;
     padding-top: 5px;
     border: 0%;
@@ -224,7 +268,7 @@ ul{
     display:inline;
     
     position:relative;
-    width:450px;
+    width:150px;
     padding: 0%;
     padding-top: 5px;
     border: 0%;
@@ -232,7 +276,7 @@ ul{
     margin-right: 10px;
 }
 
-.tracktime
+.tracktimeblock
 {
     display:inline-block;
     
@@ -243,7 +287,7 @@ ul{
 
 .playlisttrack{
      
-    display:flex;
+    display:inline-flex;
     
 }
 
@@ -251,7 +295,7 @@ ul{
     padding-left: 20px;
     padding-top: 10px;
       padding-right: 5px;
-    margin-right: 40px;
+    margin-right: 30px;
     display:block;
     background:rgba(238, 238, 238, 0.8);   
     
@@ -262,17 +306,32 @@ ul{
     display: flex;
     
 }
+.playerbarcontrols
+{
+    display: flex;
+    width:60%
+    
+}
 .trackblock{
     
     margin-right: 10px;
+}
+
+.trackname,.trackartist,.tracktime{
+    font-size: 10px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    max-width: 90px;
 }
 
 .trackart{
 
     display:block;
     background-image: url(Resources/caravan.jpg);
-    width: 125px; 
-    height: 125px;
+    width: 90px; 
+    height: 90px;
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center center; 
@@ -302,7 +361,7 @@ ul{
     display: block;
     padding-left: 15px;
     width: 10px;
-    height: 125px;
+    height: 90px;
     margin-right: 20px;
 }
 
@@ -319,19 +378,54 @@ ul{
     
 }
 
-.postedby{
+
+.fontorange{
+    
+    color: #ff872b;
+    
+}
+
+.fontwhite{
+    
+    color: aliceblue;
+    
+}
+
+.postedby,.postdate{
     font-size: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    cursor: pointer;
+}
+
+.actions{
+    font-size: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.comment,.addlist{
+    color: gray;
+    cursor: pointer;
+    
+    margin-right: 30px;
+    
+}
+a:hover{
+ 
+    text-decoration: none;   
 }
 
 .songplayer{
     position: fixed;
     display:flex;    
+
+    background: rgba(0, 0, 0, 0.4);
     
-    background: rgba(223, 228, 234, 0.4);
-    
-    filter: drop-shadow(1px 1px 6px black);
-    box-shadow: 5px 5px 5px #212223;
     width: 100%;
     bottom: 0;
     height: 50px;
@@ -339,16 +433,30 @@ ul{
     z-index: 5;
 }
 
-.songartist{}
-
-.songname{
-    margin-top: 15px;
+.songartist,.songname,.slash2{ 
+        margin-top: 15px;
         font-weight: bold;
         font-size: 16px;
         //font-style: italic;
-    margin-right: 30px;
-
+    
+  white-space: nowrap;
+         overflow: hidden;
+        text-overflow: ellipsis;
+    color: rgba(238, 238, 238, 0.8);
 }
+
+.songcurtime,.songduration,.slash{ 
+        margin-top: 19px;
+        font-weight: bold;
+        font-size: 12px;
+        color: rgba(238, 238, 238, 0.8);
+}
+
+
+.songduration{
+    margin-right:10px;
+}
+
     
 .player-track-remaining{
      position: absolute;
@@ -356,7 +464,7 @@ ul{
      padding-top: 10px;
     display:inline-block;
     background-color: aliceblue;
-    width: 800px;
+    width: 100%;
     
 }
 
@@ -380,3 +488,202 @@ ul{
     margin: 0;
    
 }
+
+.filler{
+    flex-grow: 1;
+    display: flex;
+}
+
+.filler2{
+    width: 10px;    
+}
+
+@media (min-width: 576px) { 
+    .logo{
+        margin-top: 20px;
+    }
+    
+.songfeed{
+}
+    
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 12px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 12px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    font-size: 12px;
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-size: 12 px;
+}
+    
+ .trackbar-remaining,.trackbarview{
+    width: 150px;
+}   
+    
+    .playericon{
+        font-size: 15px;
+    }
+    
+    .iconbox{
+    margin-top: 16px;
+}
+   
+    .actions{
+    font-size: 12px;
+}
+    
+     
+}
+
+
+@media (min-width: 768px) {     
+    
+    .profilepicture{    
+    height: 60px;
+          width: 60px;
+    }
+    .searchbar{
+        height: 70px;
+    }
+    .logo{
+        margin-top: 30px;
+    }
+.songfeed{
+}
+    .glyphicon.glyphicon-cog,.glyphicon.glyphicon-search{
+
+    margin-top: 30px;
+}
+ .trackbar-remaining,.trackbarview{
+    width: 370px;
+}   
+    
+.postedby{
+        max-width: none;
+    
+    margin-bottom: 15px;
+    }
+    
+    .trackicon.glyphicon.glyphicon-play,.trackicon.glyphicon.glyphicon-pause{
+         font-size: 50px;
+         width: 40px;
+    }
+    .playericon{
+        font-size: 18px;
+    }
+    
+         .trackname,.trackartist{
+        font-size: 14px;
+        margin-bottom: 2px;
+        max-width: 380px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
+    
+    .comment,.addlist{
+    margin-right: 5px;
+    
+}
+    .bar{
+        height: 142px;
+    }
+    
+    .trackart{
+        width: 142px;
+        height: 142px;
+        
+    }
+    .menu,.subir,.username{
+        font-size: 12px;
+        margin-top: 30px;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    .logo{
+        margin-top: 10px;
+    }
+    
+.songfeed{
+    margin-left: 25%;
+    
+    transform:none;
+}
+
+    
+     .trackname,.trackartist{
+        font-size: 14px;
+        margin-bottom: 2px;
+        max-width: 350px;
+    }
+    
+    .subscriptions{
+        width: 250px;
+    }
+    
+    .menu,.subir,.username{
+        font-size: 12px;
+        margin-top: 30px;
+    }
+    
+.glyphicon.glyphicon-cog,.glyphicon.glyphicon-search{
+    font-size: 20px;
+    margin-top: 25px;
+}
+    .trackbar-remaining,.trackbarview{
+    width:320px;
+    }
+    ul{
+        padding: 0;
+    }
+    
+    
+    .playericon{
+        font-size: 20px;
+    }
+    .iconbox{
+    margin-top: 12px;
+}
+        .profilepicture{    
+    height: 70px;
+          width: 70px;
+    }
+}
+
+
+
+@media (min-width: 1200px) { 
+    .logo{
+        margin-top: 18px;
+
+    }
+    
+
+.songfeed{
+    
+    margin-left: 370px;
+}  
+    .menu,.subir{
+        font-size: 12px;
+    }
+    
+    .trackbar-remaining,.trackbarview{
+    width:450px;
+    }
+    .playericon{
+        
+        font-size: 22px;
+    }
+    
+    
+     .trackname,.trackartist{
+
+        max-width: 450px;
+    }
+}
+

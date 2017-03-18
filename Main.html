@@ -3,6 +3,10 @@
 <head>
     <meta charset=="UTF-8">
     <meta name="robots" content="noarchive">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <title>Dumblr</title>
     <link rel="icon" type="image/png" href="Resources/logodumblrv2.png"/>
     
@@ -17,93 +21,143 @@
     
 </head>
 <body>
-    <div>
-        <div class="searchbar">
-            <div class="logodiv">
-            <span class="logo"></span>
+
+        <div class="searchbar container">
+            <div class="row">
+                <div class="logodiv col-xs-2 col-sm-1 col-lg-2">
+                 <div class="row">
+                <span class="logo col-xs-8"></span>
+                     </div>
             </div>
-            
-            <div><input type="text" class="transparente" placeholder="Buscar caciones..."></div>
-            <span class="glyphicon glyphicon-search"></span>
-            <span class= "menu">Listas</span>
-             <span class= "menu">Esteban Eduardo</span>
-            
-        
+                <div class="col-xs-10 col-sm-4 col-lg-4">
+                    <div class="row">
+                <form  class="col-xs-12" id="buscador" name="busqueda">
+                <div class="row">
+            <input type="text" class="transparente col-xs-10 col-sm-10" placeholder="Buscar caciones...">
+                    
+            <span class="glyphicon glyphicon-search col-xs-2 col-sm-2"></span>
+                    </div>
+            </form>
+                        </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-3">
+                <div class="row">
+            <span class= "menu col-xs-3 col-sm-2 ">Listas</span>
+            <span class= "menu col-xs-3 col-sm-4 col-lg-4">Subscripciones</span>
+            <span class= "subir col-xs-3 col-sm-4 col-lg-3">Subir audio</span>
+            <span class="glyphicon glyphicon-cog subir  col-xs-2 col-sm-1 col-md-2 col-lg-2"></span>
+            </div>
+            </div>
+                <div class="col-xs-12 col-sm-3 col-lg-3">
+                <div class="row">
+             <span class= "username subir col-sm-8 col-lg-9  visible-sm-block  visible-md-block visible-lg-block ">Esteban Eduardo Cerda Sepulveda</span>
+            <span class="col-sm-4  profilepicture  visible-sm-block  visible-md-block visible-lg-block "></span>
+          
+           
+                    </div>
+                </div>
         </div>
     </div>
     
     
-    <div class="subscriptions">
+    <div class="subscriptions visible-md-block visible-lg-block">
+        <label>Subscripciones</label>
+        <hr>
     <ul class="sublist">
 
         <li class="subelement"><div class="subscribedto"><div class="subfotodiv"><span class="subfoto"></span></div><div class="subname"><label>Edgar</label></div></div></li>    
         <li class="subelement"><div class="subscribedto"><div class="subfotodiv"><span class="subfoto"></span></div><div class="subname"><label>Karen</label></div></div></li>    
         <li class="subelement"><div class="subscribedto"><div class="subfotodiv"><span class="subfoto"></span></div><div class="subname"><label>Walter</label></div></div></li>    
+        
 
     </ul>
     </div>
      
-    
-    <div class="songfeed">
+    <div class="songfeed" style="display:flex">
+   <div class="filler"></div>
         
     <ul>
-        
         <li class="playlistsong">
         <div class="playlisttrack">
-            <div class="bar colororange"></div>
-            <div class="trackbackground">
-               <label class="postedby">Posted by: Esteban Eduardo Cerda Sepulveda</label><label class="postedby" style="float:right">17/02/2017</label>
+            <div class="bar colorwhite"></div>
+            <div class="trackbackground ">
                 <div style="display:flex">
-            <div class="playbutton" data-songid="Resources/01. Lone Digger.mp3">
-                <span class="glyphicon glyphicon-play"></span>
+               <label class="postedby">Posted by: Esteban Eduardo Cerda Sepulveda</label> 
+                  <div class="filler"></div><label class="postdate" >17/02/2017</label></div>
+                <div style="display:flex">
+            <div class="playbutton" id="01"data-songid="Resources/01. Lone Digger.mp3">
+                <span class="trackicon glyphicon glyphicon-play"></span>
             </div>
             <div class="trackblock">
-                <label>Lone Digger</label><br>
-                <label>Caravan Palace</label>
+                <label class="trackname">Lone Digger</label><br>
+                <label class="trackartist">Caravan Palace</label>
                 <div class="trackbarcontrols">
-                    <div class="trackbarview">
+                    <div class="trackbarview hidden-xs">
                         
                         <div class="trackbar-remaining"></div>
                         
                          <div class="trackbar-progress"></div>
                         <div class="diamond"></div>
                     </div>
-                    <div class="tracktime">
+                    <div class="tracktimeblock hidden-xs">
                     <label >23:03</label>
                         </div>
                     </div>
+                        <div style="float:right"> 
+                <a class="comment">
+                <span class="glyphicon glyphicon-comment"></span> 
+                <span class="actions hidden-xs">Comment</span>
+                    </a>
+                <a class="addlist">
+                <span class="glyphicon glyphicon-retweet"></span>
+                <span class="actions hidden-xs">Add list</span>
+                    </a>
+                </div>
             </div>
                     </div>
                 </div>
             <div>
-            <span class="trackart"></span>
+                
+            <span class="trackart" style="background-image:url(Resources/caravan.jpg);"></span>
             </div>
         </div> 
-        </li>s
+        </li>
         <li class="playlistsong">
         <div class="playlisttrack">
             <div class="bar colorwhite"></div>
             <div class="trackbackground">
-               <label class="postedby">Posted by: Esteban Eduardo Cerda Sepulveda</label>  <label class="postedby" style="float:right">17/02/2017</label>
+               <div style="display:flex">
+               <label class="postedby">Posted by: Esteban Eduardo Cerda Sepulveda</label> 
+                  <div class="filler"></div><label class="postdate" >17/02/2017</label></div>
                 <div style="display:flex">
-            <div class="playbutton" data-songid="Resources/whatstheuse.mp3">
-                <span class="glyphicon glyphicon-play"></span>
+            <div class="playbutton" id="02" data-songid="Resources/whatstheuse.mp3">
+                <span class="trackicon glyphicon glyphicon-play"></span>
             </div>
             <div class="trackblock">
-                <label>What's the use of feeling blue</label><br>
-                <label>Rebecca Sugar</label>
+                <label class="trackname">What's the use of feeling blue</label><br>
+                <label class="trackartist">Rebecca Sugar</label>
                 <div class="trackbarcontrols">
-                    <div class="trackbarview">
+                    <div class="trackbarview hidden-xs">
                         
                         <div class="trackbar-remaining"></div>
                         
                          <div class="trackbar-progress"></div>
                         <div class="diamond"></div>
                     </div>
-                    <div class="tracktime">
+                    <div class="tracktimeblock hidden-xs">
                     <label >23:03</label>
                         </div>
                     </div>
+                <div style="float:right"> 
+                <a class="comment">
+                <span class="glyphicon glyphicon-comment"></span> 
+                <span class="actions hidden-xs">Comment</span>
+                    </a>
+                <a class="addlist">
+                <span class="glyphicon glyphicon-retweet"></span>
+                <span class="actions hidden-xs">Add list</span>
+                    </a>
+                </div>
             </div>
                     </div>
                 </div>
@@ -112,228 +166,220 @@
             </div>
         </div> 
         </li>
+        <li class="playlistsong">
+        <div class="playlisttrack">
+            <div class="bar colorwhite"></div>
+            <div class="trackbackground ">
+                <div style="display:flex">
+               <label class="postedby">Posted by: Esteban Eduardo Cerda Sepulveda</label> 
+                  <div class="filler"></div><label class="postdate" >17/02/2017</label></div>
+                <div style="display:flex">
+            <div class="playbutton" id="01"data-songid="Resources/VARSITY - Cult of Personality.mp3">
+                <span class="trackicon glyphicon glyphicon-play"></span>
+            </div>
+            <div class="trackblock">
+                <label class="trackname">Cult of personality</label><br>
+                <label class="trackartist">Varsity</label>
+                <div class="trackbarcontrols">
+                    <div class="trackbarview hidden-xs">
+                        
+                        <div class="trackbar-remaining"></div>
+                        
+                         <div class="trackbar-progress"></div>
+                        <div class="diamond"></div>
+                    </div>
+                    <div class="tracktimeblock hidden-xs">
+                    <label >23:03</label>
+                        </div>
+                    </div>
+                        <div style="float:right"> 
+                <a class="comment">
+                <span class="glyphicon glyphicon-comment"></span> 
+                <span class="actions hidden-xs">Comment</span>
+                    </a>
+                <a class="addlist">
+                <span class="glyphicon glyphicon-retweet"></span>
+                <span class="actions hidden-xs">Add list</span>
+                    </a>
+                </div>
+            </div>
+                    </div>
+                </div>
+            <div>
+            <span class="trackart" style="background-image:url(Resources/a1169671718_10.jpg);"></span>
+            </div>
+        </div> 
+        </li>
+        <li class="playlistsong">
+        <div class="playlisttrack">
+            <div class="bar colorwhite"></div>
+            <div class="trackbackground">
+               <div style="display:flex">
+               <label class="postedby">Posted by: Esteban Eduardo Cerda Sepulveda</label> 
+                  <div class="filler"></div><label class="postdate" >17/02/2017</label></div>
+                <div style="display:flex">
+            <div class="playbutton" id="02" data-songid="Resources/Comme des Enfants -  Coeur de Pirate.mp3">
+                <span class="trackicon glyphicon glyphicon-play"></span>
+            </div>
+            <div class="trackblock">
+                <label class="trackname">Comme des enfants</label><br>
+                <label class="trackartist">Coeur de Pirate</label>
+                <div class="trackbarcontrols">
+                    <div class="trackbarview hidden-xs">
+                        
+                        <div class="trackbar-remaining"></div>
+                        
+                         <div class="trackbar-progress"></div>
+                        <div class="diamond"></div>
+                    </div>
+                    <div class="tracktimeblock hidden-xs">
+                    <label >23:03</label>
+                        </div>
+                    </div>
+                <div style="float:right"> 
+                <a class="comment">
+                <span class="glyphicon glyphicon-comment"></span> 
+                <span class="actions hidden-xs">Comment</span>
+                    </a>
+                <a class="addlist">
+                <span class="glyphicon glyphicon-retweet"></span>
+                <span class="actions hidden-xs">Add list</span>
+                    </a>
+                </div>
+            </div>
+                    </div>
+                </div>
+            <div>
+            <span class="trackart" style="background-image:url(Resources/Coeur-de-pirate-album.jpg);"></span>
+            </div>
+        </div> 
+        </li>
+        <li class="playlistsong">
+        <div class="playlisttrack">
+            <div class="bar colorwhite"></div>
+            <div class="trackbackground ">
+                <div style="display:flex">
+               <label class="postedby">Posted by: Esteban Eduardo Cerda Sepulveda</label> 
+                  <div class="filler"></div><label class="postdate" >17/02/2017</label></div>
+                <div style="display:flex">
+            <div class="playbutton" id="01"data-songid="Resources/in love with a ghost - healing.mp3">
+                <span class="trackicon glyphicon glyphicon-play"></span>
+            </div>
+            <div class="trackblock">
+                <label class="trackname">Healing</label><br>
+                <label class="trackartist">In love with a ghost</label>
+                <div class="trackbarcontrols">
+                    <div class="trackbarview hidden-xs">
+                        
+                        <div class="trackbar-remaining"></div>
+                        
+                         <div class="trackbar-progress"></div>
+                        <div class="diamond"></div>
+                    </div>
+                    <div class="tracktimeblock hidden-xs">
+                    <label >23:03</label>
+                        </div>
+                    </div>
+                        <div style="float:right"> 
+                <a class="comment">
+                <span class="glyphicon glyphicon-comment"></span> 
+                <span class="actions hidden-xs">Comment</span>
+                    </a>
+                <a class="addlist">
+                <span class="glyphicon glyphicon-retweet"></span>
+                <span class="actions hidden-xs">Add list</span>
+                    </a>
+                </div>
+            </div>
+                    </div>
+                </div>
+            <div>
+            <span class="trackart" style="background-image:url(Resources/healing.jpg);"></span>
+            </div>
+        </div> 
+        </li>
+        
+        <li class="playlistsong">
+        <div class="playlisttrack">
+            <div class="bar colorwhite"></div>
+            <div class="trackbackground ">
+                <div style="display:flex">
+               <label class="postedby">Posted by: Esteban Eduardo Cerda Sepulveda</label> 
+                  <div class="filler"></div><label class="postdate" >17/02/2017</label></div>
+                <div style="display:flex">
+            <div class="playbutton" id="01"data-songid="Resources/Here comes a thought.mp3">
+                <span class="trackicon glyphicon glyphicon-play"></span>
+            </div>
+            <div class="trackblock">
+                <label class="trackname">Here comes a thought</label><br>
+                <label class="trackartist">Rebecca Sugar</label>
+                <div class="trackbarcontrols">
+                    <div class="trackbarview hidden-xs">
+                        
+                        <div class="trackbar-remaining"></div>
+                        
+                         <div class="trackbar-progress"></div>
+                        <div class="diamond"></div>
+                    </div>
+                    <div class="tracktimeblock hidden-xs">
+                    <label >23:03</label>
+                        </div>
+                    </div>
+                        <div style="float:right"> 
+                <a class="comment">
+                <span class="glyphicon glyphicon-comment"></span> 
+                <span class="actions hidden-xs">Comment</span>
+                    </a>
+                <a class="addlist">
+                <span class="glyphicon glyphicon-retweet"></span>
+                <span class="actions hidden-xs">Add list</span>
+                    </a>
+                </div>
+            </div>
+                    </div>
+                </div>
+            <div>
+            <span class="trackart" style="background-image:url(Resources/mindful.jpg);"></span>
+            </div>
+        </div> 
+        </li>
+        
     </ul>
-    
+          <div class="filler"></div>
     </div>
 
             <div class="songplayer">
- <div style="display:flex;margin-right:20px;padding-left:30px;">
-              <span class="glyphicon glyphicon-step-backward playericon"></span>
-                <span class="glyphicon glyphicon-play playericon"></span>
-            <span class="glyphicon glyphicon-step-forward playericon"></span>
-                 <span class="glyphicon glyphicon-repeat playericon" style="font-size:15px"></span>
+ <div class="iconbox" >
+              <span class="glyphicon glyphicon-step-backward playericon" id="playerbutton1"></span>
+                <span class="glyphicon glyphicon-pause playericon" id="playerbutton2"></span>
+            <span class="glyphicon glyphicon-step-forward playericon" id="playerbutton3"></span>
+                 <span class="glyphicon glyphicon-repeat playericon fontwhite" id="playerbutton4"></span>
      </div>
-                                <div class="trackbarcontrols" style="margin-top:15px">
-                    <div class="playerbarview" style="width:800px">
+                                <div class="trackbarcontrols playerbarcontrols" style="margin-top:15px">
+                    <div class="playerbarview" >
                         
-                        <div class="player-track-remaining" style="width:800px"></div>
+                        <div class="player-track-remaining"></div>
                         
                          <div class="player-track-progress" ></div>
                         <div class="diamond" id="diamondthumb"></div>
                     </div>
                                         </div>
-            <span class= "songname">Lone Digger-</span>
-             <span class= "songname">Caravan Palace</span>
+               
+                <span class="songcurtime">30:20</span>
+                 <span class="slash">/</span>
+                <span class="songduration">20:34</span>
+          
+            <span class= "songartist hidden-xs">Lone Digger</span>
+                
+                 <span class= "slash2 hidden-xs">&nbsp;-&nbsp;</span>
+             <span class= "songname hidden-xs">Caravan Palace</span>
+                  <div class="filler"></div>
+                <div>
                 <span class="playerart"></span>
+                    </div>
+                 <div class="filler2"></div>
                 
         </div>
-    
-    <script>
-        
-    var mousex =0;
-    var mousedownn;
-    var trackbarfocus;
-        
-        
-    var lasttrack; 
-    var playing=false;
-    var songstatus; 
-    var trackdown=false;
-    var playerdown=false;
-        
-        $(document).ready(function(){
-            $(".songplayer").hide();
-                       });
-        
-        function pixelsToSeconds(pixels,maxpixel,maxtime){
-            return pixels*maxtime/maxpixel;
-            
-        }
-        
-        
-        function secondsToPixels(seconds,maxpixel,maxtime){
-            return seconds*maxpixel/maxtime;
-            
-        }
-        
- 
-        
-    $(".trackbarview").on("mousedown",function(event){
-        event.preventDefault();
-        trackbarfocus=$(this);
-        mousex=event.pageX-$(this).offset().left;
-        mousedownn=true;
-        trackdown=true;
-        movebar();
-        });
-        
-    $(".playerbarview").on("mousedown",function(event){
-        event.preventDefault();
-        mousex=event.pageX-$(this).offset().left;
-        mousedownn=true;
-        playerdown=true;
-        moveplayerbar();
-        });
-        
-function movediamond()
-        {
-         trackbarfocus.on("mousemove",function(e){
-        mousex=event.pageX-$(this).offset().left;
-        e.preventDefault(); 
-        });
-            
-        trackbarfocus.children(".diamond").css({ left:mousex, position:'absolute'});    
-    
-       trackbarfocus.children(".trackbar-progress").css({ width:mousex, position:'absolute'}); 
-        }
-        
-function moveplayerdiamond()
-        {
-        
-        $(".playerbarview").on("mousemove",function(e){
-        mousex=event.pageX-$(this).offset().left;
-        e.preventDefault(); 
-        });
-            
-        $("#diamondthumb").css({ left:mousex, position:'absolute'});    
-    
-        $(".player-track-progress").css({ width:mousex, position:'absolute'}); 
-        }
-        
-function movebar(){
-        if (!mousedownn) { return; }  
-    if(mousedownn){
-        timeout = (setInterval(movediamond ,10));
-                    }   
-}; 
-        
-function moveplayerbar(){
-        if (!mousedownn) { return; }  
-    if(mousedownn){
-        timeout2 = (setInterval(moveplayerdiamond ,10));
-                    }   
-}; 
-       
-    $(document).on("mouseup",function(event){
-        if(mousedownn){
-            
-        mousedownn=false;
-            if(trackdown){
-            
-                trackdown=false;
-        clearInterval(timeout);
-        song.currentTime = pixelsToSeconds(mousex,trackbarfocus.width(),song.duration); 
-            }
-            if(playerdown){
-                
-                playerdown=false;
-        
-        clearInterval(timeout2);
-            var barwidth= $(".player-track-remaining").width();        
-        song.currentTime = pixelsToSeconds(mousex,barwidth,song.duration);
-            }
-        }
-    });
-     
-
-    song = new Audio('Resources/01. Lone Digger.ogg','Resources/01. Lone Digger.mp3');
-        
-        if (song.canPlayType('audio/mpeg;')) {
-  	song.type= 'audio/mpeg';
-  	song.src= 'Resources/01. Lone Digger.mp3';
-	} else {
-  	song.type= 'audio/ogg';
-  	song.src= 'Resources/01. Lone Digger.ogg';
-	}
-        
-    $(".playbutton").on("click",function (e){     
-        
-        if(lasttrack&&songstatus==true)
-            {
-                       
-                lasttrack.find("span").toggleClass("glyphicon-play glyphicon-pause");
-                if($(this).is(lasttrack)&&songstatus==true)
-                {
-                    song.pause();
-                    songstatus=false;
-                    lasttrack=$(this);
-             
-                    return;
-                }
-                songstatus=true;
-                lasttrack=$(this);
-            }
-        else{
-            lasttrack=$(this);
-            songstatus=true;
-            $(".songplayer").show();
-            }
-           trackbarfocus=lasttrack.parent().find(".trackbarview");
-        
-            $(this).find("span").toggleClass("glyphicon-play glyphicon-pause");
-
-        
-            song.src=$(this).data("songid");
-            e.preventDefault();
-		    song.play();
-        
-            
-        });
- 
-                 
-                 
-song.addEventListener("timeupdate",function (){
-    if(!mousedownn){
-    curtime = parseInt(song.currentTime, 10);
-    
-    bartime=secondsToPixels(curtime,trackbarfocus.width(),song.duration);
-     
-    trackbarfocus.children(".trackbar-progress").css({ width:bartime}); 
-    
-    trackbarfocus.children(".diamond").css({left:bartime}); 
-        
-    var barwidth= $(".player-track-remaining").width();
-    bartime=secondsToPixels(curtime,barwidth,song.duration);
-        
-    $(".player-track-progress").css({ width:bartime}); 
-
-     $("#diamondthumb").css({ left:bartime}); 
-    }
-});     
-
-        
-var leftInit = $(".subscriptions").offset().left;
-var top = $('.subscriptions').offset().top - parseFloat($('.subscriptions').css('margin-top').replace(/auto/, 0));
-
-
-$(window).scroll(function(event) {
-    var x = 0 - $(this).scrollLeft();
-    var y = $(this).scrollTop();
-
-    // whether that's below the form
-    if (y >= top) {
-        // if so, ad the fixed class
-        $('.subscriptions').addClass('fixed');
-    } else {
-        // otherwise remove it
-        $('.subscriptions').removeClass('fixed');
-    }
-
-    $(".subscriptions").offset({
-        left: x + leftInit
-    });
-
-});
-    </script>
+    <script src="dumblrplayer.js"></script>
 </body>
 </html>
