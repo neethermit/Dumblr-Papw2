@@ -4,7 +4,7 @@
 }
 
 body{
-        background: url('Resources/lowpolyO2.png') no-repeat center center fixed; 
+    background: url('Resources/lowpolyO2.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -13,7 +13,18 @@ body{
     margin: 0%;
 }
 
-a {
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+.whitefont{
+    color: #ddd;
+    text-decoration: none;
+}
+a{
     color: #ddd;
     text-decoration: none;
 }
@@ -36,6 +47,9 @@ hr{
 
 }
 
+.flexdiv{
+    display: flex;
+}
 
 .filler{
     flex-grow: 1;
@@ -45,81 +59,66 @@ hr{
 
 .logo{
     display: flex;
-    position: absolute;
     background:#222;
-padding-bottom: 10px;
+    padding-bottom: 10px;
     width: 100%;
     z-index: 1;
     
 }
 
 .logo img{
-    height: 50px;
-    
-    margin-top: 20px;
-}
-.logo hr{
-    position: absolute;
-    top: 85%;  
-    left: 37.5%;
-    width:25%;
-    z-index: 1;
+    height: 20px;
+    margin-top: 15px;
 }
 
-.logo .light{
-    position: absolute;
-    top: 100%;
-    color: #F22;
-    left: 0%;
-    width:100%;
-    z-index: 1;
+
+.logofooter{
+    font-family:Royal;
+    color: aliceblue;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.companyname{
+    color:azure;
+}
+
+.loginbody{
+
+  vertical-align:middle;
+  text-align:center;
+    margin-top: 20px;
+}
+
+.flex-center-vertically {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80%;
 }
 
 .contenedor {
     background: rgba(223, 228, 234, 0.2);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 300px;
     text-align: center; 
     padding: 15px;
     filter: drop-shadow(1px 1px 10px black);
     box-shadow: 0px 0px 5px #212223;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;   
 }
 
-
-
-.inicio{
-    position: absolute;
-    top: 40%;
-    left:50%;
-    transform: translate(-50%,-50%);
-}
 
 .crear{
-    display: inline-block;
-    position: absolute;
-    top: 80%;
-    left:50%;
-    color: aliceblue;
-    transform: translate(-50%,-50%);
-    
+    display: flex;
+    margin-top: 20px;
+    color: aliceblue;   
 }
 
 .crear hr{
     display:inline-block;
     color: aliceblue;
     width: 45%;
-    transform: translate(0%,10%);
+    transform: translate(0%,15%);
 }   
-
-.crear hr:first-of-type{
-    //padding-left: 25%;
-    
-}
 
 input[type="text"], input[type="password"], select, input[type="date"], input[type="email"] {
     font-size: 13px;
@@ -247,7 +246,7 @@ margin-top: 20px;
     color: aliceblue;
     background: rgba(0,0,0,0);
     padding-bottom: 0%;
-    margin-bottom: 5%;
+    margin-bottom: 5px;
     z-index: 1;
     font-family: Royal;
     outline: none;
@@ -311,6 +310,24 @@ position: absolute;}
     margin-right: 50px;
 }
 
+@media (min-width: 992px) { 
+
+    .logo img{
+        height: 40px;
+    }
+.logo input[type="text"]{
+
+        width: 100%;
+    margin-bottom: 20px;
+    }
+    
+.contenedor {
+    
+    text-align: center; 
+    
+}
+}
+
 
 @media  (min-height: 1300px)  { 
     
@@ -322,12 +339,13 @@ position: absolute;}
     .logo img{
     height: 60px;
     }
-.contenedor {
-    width: 40%;
-    height: 20%;
     
-}
-    
+    .logofooter{
+        font-size: 24px;
+
+    }
+        
+  
     input[type="text"], input[type="password"], select, input[type="date"], input[type="email"] {
     height: 45px;
     width: 100%;

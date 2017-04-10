@@ -21,44 +21,53 @@
 </head>
 <body>
         <div class="logo">
-             <div class="container-fluid">
+             <div class="container">
             <div class="row ">
                 <div class="col-xs-12">
                     <img src="Resources/Dumblr2logo.png" class="center-block">
                 </div>    
                 
-                <div class="col-xs-12">
-            <div class="buscar center-block">
-            <input type="text" placeholder="Buscar..." class="center-block"> 
-            <span class="glyphicon glyphicon-search"></span>
-            </div>
+                <div class="col-xs-12 text-center">
+        <label class="logofooter">Comparte tu muscia como quieras</label>
                 </div>
                 </div>
             </div>
     </div>
-        
-<div class="container-fluid"> 
-        <label class="inicio">Iniciar session</label>
-            <div id="login" class="contenedor" style="left:50%">
+      <div class="flex-center-vertically"> 
+<div class="flexdiv loginbody"> 
+    <div class="filler"></div>
+    <div>
+            <div id="login" class="contenedor">
             <form action="index.php" method="post">
             
+                <p class="whitefont">Iniciar Sessi&oacute;n</p>
                 <input type="text" class="form-control" placeholder="ejemplo@email.com" name="correoL" maxlength="40" required>
                 <input type="password" class="form-control" placeholder="contrase&ntilde;a" name="passwordL" maxlength="40" required>
                 <button class="button" type="submit" name="loginbutton"><b>Entrar</b></button>
                 <a href="recuperarContra.php"><p>&iquest;Olvidaste tu contrase&ntilde;a?</p></a>
          </form>
         </div>
-    <div class="crear">
-    <br>
-                <hr>&nbsp;ó&nbsp;<hr>
-        
-    <br>
-             
-    <br>
-                    <button class="button openmodal" type="submit" name="loginbutton"><b>   Crear nueva cuenta</b></button>
-    </div>
     
+    <div class="crear">
+        <div class="filler"></div>
+    <div>
+        <div class="flexdiv">
+            
+    <hr>&nbsp;ó&nbsp;<hr>
+        </div>
+        
+        <div class="flexdiv">
+    <button class="button openmodal" type="submit" name="loginbutton"><b>   Crear nueva cuenta</b></button>
+        </div>
+        </div>
+        <div class="filler"></div>
+        
     </div>
+        </div>
+    <div class="filler"></div>
+    </div>
+    </div> 
+    
         <div id="myModal" class="modal">
         <div class="modal-content">
             <form name="singup">
@@ -202,8 +211,8 @@
             </form>
             </div>
     </div>
-    
-    
+    <div  style="flex-grow: 1;">
+    <center><label class="companyname">Esteban &amp; Edgar 2017</label></center></div>
      <script>
         
                 

@@ -161,7 +161,8 @@ function moveplayerbar(){
         if(lasttrack){
             
             lasttrack.find("span").removeClass("glyphicon-pause").addClass("glyphicon-play");
-            statusbarfocus.toggleClass("colororange colorwhite");
+            
+            statusbarfocus.removeClass("colororange").addClass("colorwhite");
             
         }
             song.src=$(this).data("songid");
@@ -179,9 +180,8 @@ function moveplayerbar(){
         }
         
         $("#playerbutton2").removeClass("glyphicon-play").addClass("glyphicon-pause");
-        $(this).find("span").removeClass("glyphicon-play");
-        $(this).find("span").addClass("glyphicon-pause");
-        statusbarfocus.toggleClass("colororange colorwhite");
+        $(this).find("span").removeClass("glyphicon-play").addClass("glyphicon-pause");
+        statusbarfocus.removeClass("colorwhite").addClass("colororange");
         song.play();
         
 
@@ -201,9 +201,8 @@ function moveplayerbar(){
             lasttrack=$(this);
         }
          $("#playerbutton2").removeClass("glyphicon-pause").addClass("glyphicon-play");
-        $(this).find("span").removeClass("glyphicon-pause");
-        $(this).find("span").addClass("glyphicon-play");
-        statusbarfocus.toggleClass("colororange colorwhite");
+        $(this).find("span").removeClass("glyphicon-pause").addClass("glyphicon-play");
+        statusbarfocus.removeClass("colororange").addClass("colorwhite");
         song.pause();
             
             songstatus=false;
@@ -239,12 +238,20 @@ function moveplayerbar(){
                 song.play();
                 songstatus=true;
             }
+            else{
+                if(songstatus==false){
+                lasttrack.find("span").removeClass("glyphicon-pause").addClass("glyphicon-play");
+                 statusbarfocus.removeClass("colororange").addClass("colorwhite"); 
+                $("#playerbutton2").removeClass("glyphicon-pause").addClass("glyphicon-play");
+                songstatus=false
+                }
+            }
         }
         
         
         function prevsong(){
             if(!trackblockfocus.is(":first-child")){
-                if(song.currentTime<2){
+                if(song.currentTime<5){
                 lasttrack.find("span").removeClass("glyphicon-pause").addClass("glyphicon-play");
                 statusbarfocus.removeClass("colororange").addClass("colorwhite");
                 $("#playerbutton2").removeClass("glyphicon-pause").addClass("glyphicon-play");
@@ -268,6 +275,12 @@ function moveplayerbar(){
                 else{
                     song.currentTime=0;
                 }
+            }
+            else{
+                      if(song.currentTime>5){
+                          
+                    song.currentTime=0;
+                      }
             }
         }
         

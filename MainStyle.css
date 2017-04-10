@@ -14,6 +14,13 @@ body{
     margin: 0%;
 }
 
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
 ul{
     padding: 0;
     list-style-type: none;
@@ -22,33 +29,33 @@ ul{
 hr{
     margin-top:0; 
 }
+
 .searchbar{
     position: fixed;
     background: #222;
     width: 100%;
     top: 0%;
-    box-shadow: 0px 5px 20px #212223;
+    box-shadow: 0px 1px 5px #212223;
     z-index: 5;
 }
 
 .subscriptions{
     position: fixed;
-    top: 100px;
+    top: 120px;
     background:rgba(238, 238, 238, 0.6);
     height: 75%;
     width:270px;
     left: 30px;    
     padding: 30px;
     padding-top:20px;
-    //overflow-y:scroll;
+    overflow-y:auto;
  
 }
 
 .songfeed{
     margin-top: 100px;
     margin-bottom: 30px;
-    padding-top: 1%;
-    padding-bottom: 100%;
+    padding-top: 15px;
     display: inline-block;
     z-index: -1;
     
@@ -57,7 +64,7 @@ hr{
 
 .playlistsong{
     margin-bottom: 15px;
-    width:70%;
+   
     margin-top: 0px;
     
 }
@@ -125,7 +132,7 @@ hr{
 .subir{
     color:#ff872b;
 }
-.profilepicture{    
+.userpic{    
     background-image: url(Resources/astroavatar.png);
     display:block;
     width: 70px;
@@ -138,14 +145,15 @@ hr{
 }
 
 
-.glyphicon.glyphicon-search,.glyphicon.glyphicon-cog{
+.glyphicon.glyphicon-search,.glyphicon.glyphicon-cog.subir{
     margin-top: 30px;
     font-size: 15px;
-    color: aliceblue;
     cursor: pointer;
+      color: aliceblue;
 }
 
-.glyphicon.glyphicon-cog{
+.glyphicon.glyphicon-cog.subir{
+  
      margin-top: 10px;
 }
 
@@ -153,10 +161,7 @@ hr{
     
     padding-left: 10px;
 }
-.glyphicon-comment,.glyphicon-retweet{
- 
-    font-size: 12px;   
-}
+
 
 
 
@@ -172,6 +177,11 @@ hr{
     margin-right: 35px;
 }
 
+.cross{
+    font-size: 10px;
+    cursor: pointer;
+}
+
 .playericon{
   
     cursor: pointer;
@@ -179,6 +189,8 @@ hr{
     width:inherit;
     color: rgba(238, 238, 238, 0.8);
 }
+
+
 
 .iconbox{
     display:flex;
@@ -212,6 +224,7 @@ hr{
 
 .subname{
     padding-top:5px;
+    margin-top: auto;
 }
 
  .trackbar-progress{
@@ -268,7 +281,6 @@ hr{
     display:inline;
     
     position:relative;
-    width:150px;
     padding: 0%;
     padding-top: 5px;
     border: 0%;
@@ -285,7 +297,7 @@ hr{
 .playbutton{
 }
 
-.playlisttrack{
+.playlisttrack,.commentblock{
      
     display:inline-flex;
     
@@ -295,7 +307,6 @@ hr{
     padding-left: 20px;
     padding-top: 10px;
       padding-right: 5px;
-    margin-right: 30px;
     display:block;
     background:rgba(238, 238, 238, 0.8);   
     
@@ -317,6 +328,8 @@ hr{
     margin-right: 10px;
 }
 
+
+
 .trackname,.trackartist,.tracktime{
     font-size: 10px;
     margin: 0;
@@ -326,7 +339,7 @@ hr{
     max-width: 90px;
 }
 
-.trackart{
+.trackart,.commentpic{
 
     display:block;
     background-image: url(Resources/caravan.jpg);
@@ -335,6 +348,11 @@ hr{
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center center; 
+}
+
+.commentpic{
+margin: 0;
+    margin-right: 25px;
 }
 
 .diamond {
@@ -498,6 +516,17 @@ a:hover{
     width: 10px;    
 }
 
+.glyphactions{
+    color:dimgrey;
+    font-size: 12px;   
+}
+
+
+.flexdiv{
+    display: flex;
+}
+
+
 @media (min-width: 576px) { 
     .logo{
         margin-top: 20px;
@@ -519,10 +548,6 @@ a:hover{
     font-size: 12 px;
 }
     
- .trackbar-remaining,.trackbarview{
-    width: 150px;
-}   
-    
     .playericon{
         font-size: 15px;
     }
@@ -541,19 +566,19 @@ a:hover{
 
 @media (min-width: 768px) {     
     
-    .profilepicture{    
+    .userpic{    
     height: 60px;
           width: 60px;
     }
     .searchbar{
-        height: 70px;
+        height: 60px;
     }
     .logo{
         margin-top: 30px;
     }
 .songfeed{
 }
-    .glyphicon.glyphicon-cog,.glyphicon.glyphicon-search{
+    .glyphicon.glyphicon-cog.subir,.glyphicon.glyphicon-search{
 
     margin-top: 30px;
 }
@@ -592,7 +617,8 @@ a:hover{
         height: 142px;
     }
     
-    .trackart{
+    .trackart,.commentpic{
+        margin-left: 20px;
         width: 142px;
         height: 142px;
         
@@ -606,12 +632,12 @@ a:hover{
 
 @media (min-width: 992px) { 
     .logo{
-        margin-top: 10px;
+        margin-top: 25px;
     }
     
 .songfeed{
     margin-left: 25%;
-    
+    margin-top: 110px;
     transform:none;
 }
 
@@ -631,7 +657,7 @@ a:hover{
         margin-top: 30px;
     }
     
-.glyphicon.glyphicon-cog,.glyphicon.glyphicon-search{
+.glyphicon.glyphicon-cog.subir,.glyphicon.glyphicon-search{
     font-size: 20px;
     margin-top: 25px;
 }
@@ -649,15 +675,22 @@ a:hover{
     .iconbox{
     margin-top: 12px;
 }
-        .profilepicture{    
+        .userpic{    
     height: 70px;
           width: 70px;
+    }
+       .searchbar{
+        height: 70px;
     }
 }
 
 
 
 @media (min-width: 1200px) { 
+    
+    .subscriptions{
+        width: 300px;
+    }
     .logo{
         margin-top: 18px;
 
